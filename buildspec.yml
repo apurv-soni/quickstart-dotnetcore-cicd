@@ -3,7 +3,7 @@ phases:
   pre_build:
     commands:
       - sudo rpm -Uvh https://packages.microsoft.com/config/centos/7/packages-microsoft-prod.rpm
-      - sudo yum install aspnetcore-runtime-6.0
+      - sudo yum install aspnetcore-runtime-6.0 -y
       - echo Restore started on `date`
       - dotnet restore MVC_Core_WebApp/MVC_Core_WebApp.csproj
   build:
