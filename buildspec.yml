@@ -3,7 +3,7 @@ phases:
   pre_build:
     commands:
       - echo Restore started on `date`
-      - dotnet restore MVC_Core_Publish/MVC_Core_WebApp.deps.json
+      #- dotnet restore MVC_Core_Publish/MVC_Core_WebApp.deps.json
   build:
     commands:
       - echo Build started on `date`
