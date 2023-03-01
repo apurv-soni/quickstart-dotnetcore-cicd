@@ -3,11 +3,11 @@ phases:
   pre_build:
     commands:
       - echo Restore started on `date`
-      #- dotnet restore MVC_Core_Publish/MVC_Core_WebApp.deps.json
+      - dotnet restore WebApplicationSample/WebApplicationSample.csproj
   build:
     commands:
       - echo Build started on `date`
-      - dotnet publish -c release -o ./build_output  MVC_Core_Publish/MVC_Core_WebApp.deps.json
+      - dotnet publish -c release -o ./build_output WebApplicationSample/WebApplicationSample.csproj
 artifacts:
   files:
     - ./**/*
