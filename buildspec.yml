@@ -2,14 +2,14 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - sudo rpm -Uvh https://packages.microsoft.com/config/centos/7/packages-microsoft-prod.rpm
-      - sudo yum install dotnet-sdk-6.0 -y
-      - sudo yum install aspnetcore-runtime-6.0 -y
-      - sudo yum install dotnet-runtime-6.0 -y
       - echo Restore started on `date`
       - dotnet restore MVC_Core_WebApp/MVC_Core_WebApp.csproj
   build:
     commands:
+      - sudo rpm -Uvh https://packages.microsoft.com/config/centos/7/packages-microsoft-prod.rpm
+      - sudo yum install dotnet-sdk-6.0 -y
+      - sudo yum install aspnetcore-runtime-6.0 -y
+      - sudo yum install dotnet-runtime-6.0 -y
       - echo Build started on `date`
       - dotnet publish -c release -o ./build_output MVC_Core_WebApp/MVC_Core_WebApp.csproj
 artifacts:
